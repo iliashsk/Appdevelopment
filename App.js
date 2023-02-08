@@ -1,33 +1,34 @@
+
 import { StatusBar } from 'expo-status-bar';
-import {AppRegistry, StyleSheet, Text, View } from 'react-native';
-import Cat from './src/Cat.js'
+import {AppRegistry,SafeAreaView, StyleSheet, Text, View,ScrollView } from 'react-native';
+import LotsOfStyles from './src/LotsOfStyles.js'
+import TextInputExample from './src/TextInputExample.js'
+import Map from './src/Map'
+
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Cat/>
-      <Text style={styles.hello}>
-      how are You My friends
-      </Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+    <ScrollView style={styles.scrollView}>
+
+          <TextInputExample/>
+          <LotsOfStyles/>
+          <Map name="iliash sk"/>
+
+    </ScrollView>
+    </>
   );
 }
 
-const styles = StyleSheet.create({
 
-  container: {
-    flex: 1,
-    backgroundColor: 'lightgreen',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  hello: {
-    fontSize: 50,
-    textAlign: 'center',
-    margin: 10,
-    color:'goldenrod',
-  },
+const styles = StyleSheet.create({
+  scrollView: {
+    flex:1,
+    backgroundColor: '#F0E68C',
+    marginHorizontal: 5,
+    marginTop:30,
+  }
 });
+
 AppRegistry.registerComponent(
   'MyReactNativeApp',
   () => HelloWorld,
